@@ -1,5 +1,5 @@
 import {useState} from "react";
-import shotid from "shortid";
+import shortid from "shortid";
 import {createContainer} from 'unstated-next';
 
 export const useStore = () => {
@@ -33,12 +33,12 @@ export const useStore = () => {
     const handleSubmit = event => {
         event.preventDefault();
         const value = {
-            id: shotid.generate(),
+            id: shortid.generate(),
             title: item
         };
         addTodo(todos.concat(value));
         setTodo("");
-    }
+    };
 
     return {
         input,
